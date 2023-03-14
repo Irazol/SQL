@@ -1,0 +1,56 @@
+CREATE DATABASE MyDB;
+							 
+USE MyDB;    
+
+CREATE TABLE Employees
+(
+     id INT AUTO_INCREMENT,
+	 name VARCHAR(30),
+     phone VARCHAR(15), 
+     PRIMARY KEY(id)
+);
+
+CREATE TABLE Salary
+(
+     id INT AUTO_INCREMENT,
+	 salary DOUBLE,
+     position VARCHAR(30), 
+     PRIMARY KEY(id)
+);
+
+CREATE TABLE Adress
+(
+     id INT AUTO_INCREMENT,
+	 position VARCHAR(30),
+     date_of_birth DATE,
+     adress VARCHAR(50),
+     married BOOLEAN,
+     PRIMARY KEY(id)     
+);
+INSERT INTO Employees
+(name,phone)
+VALUES
+('Bill','0853687156'),
+('Nick','0823647156'),
+('Ann','0853654651'),
+('Maria','0653687456');
+
+INSERT INTO Salary
+(salary,position)
+VALUES
+(100000,'Director'),
+(30000,'Manager'),
+(50000,'Engineer'),
+(25000,'Economist');
+
+INSERT INTO Adress
+(position, date_of_birth, adress, married)
+VALUES
+('Director','2005-02-13','Mexico', true),
+('Manager','2001-12-05','Praha', false),
+('Engineer','1999-08-25','Paris', false),
+('Economist','1996-11-06','London', true);
+
+SELECT id FROM Salary WHERE salary > 30000 ;
+UPDATE adress SET married = false WHERE id = 1;
+SELECT * FROM adress;
