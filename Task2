@@ -1,0 +1,26 @@
+CREATE DATABASE CarsDB;
+USE CarsDB;
+
+CREATE TABLE Cars
+(
+     id int AUTO_INCREMENT,
+	 mark VARCHAR(30),
+     model VARCHAR(15), 
+     volume int,
+     price int,
+     max_speed int,
+     PRIMARY KEY(id)
+);
+
+INSERT INTO Cars
+(mark, model, volume, price, max_speed)
+VALUES
+('Lexus','RC',4969,45000,220),
+('Aston Martin','DBX',3982,150000,200),
+('Bentley','Continental GT',5950,320000,250),
+('BMW','X6',2993,30000,220), 
+('Volkswagen','Jetta',1395,10000,150),  
+('Ford','Mustang',5038,50000,220),
+('Toyota','Corolla',1364,20000,170);
+
+SELECT * FROM Cars;  
